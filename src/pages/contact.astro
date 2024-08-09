@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title = "Contacto" sideBarActiveItemID="contact">
+  
+  <div class="flex items-center min-h-screen bg-gray-900">
+  <div class="container mx-auto">
+    <div class="max-w-md mx-auto my-10 bg-gray-800 p-5 rounded-md shadow-sm">
+      <div class="text-center">
+        <h1 class="my-3 text-3xl font-semibold text-gray-100">
+          Contacto
+        </h1>
+        <p class="text-gray-400 dark:text-gray-400">
+          Rellena el formulario para contactarme y te respondere en cuanto pueda.
+        </p>
+      </div>
+      <div class="m-7">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="0f93984a-186f-433b-8cda-9cd25b7725d0" />
+          <input type="hidden" name="subject" value="Nuevo email del CV Web" />
+          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+          <div class="mb-6">
+            <label for="name" class="block mb-2 text-sm text-gray-400">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Pepito" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+          <div class="mb-6">
+            <label for="email" class="block mb-2 text-sm text-gray-400">Email</label>
+            <input type="email" name="email" id="email" placeholder="pepitogrillo@gmail.com" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block mb-2 text-sm text-gray-400">Tu Mensaje</label>
+
+            <textarea rows="5" name="message" id="message" placeholder="Dime que necesitas..." class="w-full px-3 py-2 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" required></textarea>
+          </div>
+          <div class="mb-6">
+            <button type="submit" class="w-full bg-indigo-600 inline-block text-white no-underline hover:text-indigo-100 py-4 px-4 rounded-sm focus:outline-none">
+              Enviar
+            </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById("form");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function (e) {
+  const formData = new FormData(form);
+  e.preventDefault();
+  var object = {};
+  formData.forEach((value, key) => {
+    object[key] = value;
+  });
+  var json = JSON.stringify(object);
+  result.innerHTML = "Un momentito...";
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: json
+  })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        result.innerHTML = json.message;
+        result.classList.remove("text-gray-500");
+        result.classList.add("text-green-500");
+      } else {
+        console.log(response);
+        result.innerHTML = json.message;
+        result.classList.remove("text-gray-500");
+        result.classList.add("text-red-500");
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      result.innerHTML = "Esto es embarazoso, algo ha ido mal!";
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 5000);
+    });
+});
+  
+</script>
+</BaseLayout> 
