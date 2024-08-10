@@ -46,19 +46,19 @@ Desde su comienzo, han lanzado muchas versiones, existen las versionas A, A+, B,
 <div mb-9>
   <div class="carousel carousel-vertical rounded-box h-96">
     <div class="carousel-item h-full">
-      <img src="../../../public/RBPmpdels1.png" />
+      <img salt="By Les Pounder from Blackpool, UK - Raspberry Pi Zero W, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=111937736" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Raspberry_Pi_Zero_W_%2832974172980%29_%28cropped%29.jpg/1280px-Raspberry_Pi_Zero_W_%2832974172980%29_%28cropped%29.jpg" />
     </div>
     <div class="carousel-item h-full">
-      <img src="../../../public/RBPmpdels2.png" />
+      <img alt="By Gareth Halfacree from Bradford, UK - Raspberry Pi 3 B+, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=67384207" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Raspberry_Pi_3_B%2B_%2839906369025%29.png/1024px-Raspberry_Pi_3_B%2B_%2839906369025%29.png" />
     </div>
     <div class="carousel-item h-full">
-      <img src="../../../public/RBPmpdels3.png" />
+      <img alt="By Laserlicht / Wikimedia Commons, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=80140657" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Raspberry_Pi_4_Model_B_-_Top.jpg/800px-Raspberry_Pi_4_Model_B_-_Top.jpg" />
     </div>
     <div class="carousel-item h-full">
-      <img src="../../../public/RBPmpdels4.png" />
+      <img alt="By Abdulla Al Muhairi from Abu Dhabi, UAE - Raspberry Pi 400, CC0, https://commons.wikimedia.org/w/index.php?curid=96054973" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Raspberry_Pi_400_%2850586757772%29.jpg/800px-Raspberry_Pi_400_%2850586757772%29.jpg" />
     </div>
     <div class="carousel-item h-full">
-      <img src="../../../public/RBPmpdels5.png" />
+      <img alt="By SparkFun Electronics - https://www.sparkfun.com/products/23551, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=138615623" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/23551-Raspberry-Pi-5-8G_%28cropped%29.jpg/800px-23551-Raspberry-Pi-5-8G_%28cropped%29.jpg" />
     </div>
   </div>
     <div class="flex flex-col items-center">
