@@ -8,3 +8,4 @@ export default defineConfig({
   site: 'https://astrofy-template.netlify.app',
   integrations: [mdx(), sitemap(), tailwind()]
 });
+
