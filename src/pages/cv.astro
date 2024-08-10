@@ -278,33 +278,44 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   HTML5 & CSS3
 </div>
 
-<!--<div class="badge badge-warning gap-2">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    class="inline-block h-4 w-4 stroke-current">
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M6 18L18 6M6 6l12 12"></path>
-  </svg>
-  warning
-</div>
-<div class="badge badge-error gap-2">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    class="inline-block h-4 w-4 stroke-current">
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M6 18L18 6M6 6l12 12"></path>
-  </svg>
-  error
-</div> -->
+<br><br><br>
 
+<!-- Idiomas -->
+
+<div class="mb-5">
+  <div class="text-3xl w-full font-bold">Idiomas</div>
+</div>
+
+<div class="time-line-container grid gap-4 mb-10">
+  <TimeLineElement
+    title="Español"
+    subtitle="Lengua madre"
+  />
+</div>
+
+<div class="time-line-container grid gap-4 mb-10">
+  <TimeLineElement
+    title="Italiano"
+    subtitle="Nivel Medio"
+  />
+</div>
+<br><br>
+<!-- Descarga CV -->
+<div class="text-center w-full font-thin">Scarica il curriculum in italiano</div><br>
+  <div class="flex flex-col items-center">
+    <a src="#">
+      <button class="btn">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M13 11.15V4a1 1 0 1 0-2 0v7.15L8.78 8.374a1 1 0 1 0-1.56 1.25l4 5a1 1 0 0 0 1.56 0l4-5a1 1 0 1 0-1.56-1.25L13 11.15Z" clip-rule="evenodd"/>
+          <path fill-rule="evenodd" d="M9.657 15.874 7.358 13H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2.358l-2.3 2.874a3 3 0 0 1-4.685 0ZM17 16a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17Z" clip-rule="evenodd"/>
+        </svg>    
+        Scarica in 🇮🇹
+      </button>
+    </a>
+    <div>
+      <br>
+      <p>Spiacente, al momento non è disponibile</p>
+    </div>
+  </div>
+</div>
 </BaseLayout>
