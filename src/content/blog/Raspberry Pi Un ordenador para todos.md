@@ -46,19 +46,19 @@ Desde su comienzo, han lanzado muchas versiones, existen las versionas A, A+, B,
 <div mb-9>
   <div class="carousel carousel-vertical rounded-box h-96">
     <div class="carousel-item h-full">
-      <img src="/public/RBPmpdels1.png" />
+      <img src="../public/RBPmpdels1.png" />
     </div>
     <div class="carousel-item h-full">
-      <img src="/public/RBPmpdels2.png" />
+      <img src="../public/RBPmpdels2.png" />
     </div>
     <div class="carousel-item h-full">
-      <img src="/public/RBPmpdels3.png" />
+      <img src="../public/RBPmpdels3.png" />
     </div>
     <div class="carousel-item h-full">
-      <img src="/public/RBPmpdels4.png" />
+      <img src="../public/RBPmpdels4.png" />
     </div>
     <div class="carousel-item h-full">
-      <img src="/public/RBPmpdels5.png" />
+      <img src="../public/RBPmpdels5.png" />
     </div>
   </div>
     <div class="flex flex-col items-center">
