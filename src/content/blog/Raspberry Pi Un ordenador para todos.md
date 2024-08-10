@@ -40,47 +40,34 @@ Todos estos periféricos se pueden conseguir en el bazar más cercano, podemos e
 ## Modelos y usos más frecuentes.
 
 Desde su comienzo, han lanzado muchas versiones, existen las versionas A, A+, B, B+ y las versiones zero, una más barata que la otra sacrificando wifi y bluetooth.<br> Su último lanzamiento ha sido *un todo en uno donde* se incluye un teclado, por ahora vamos a omitir las primeras versiones, dejando así solo los últimos lanzamientos y los modelos B + o zero más utilizados.<br> En la siguiente tabla se puede ver los modelos y sus usos más frecuentes. Puedes ir directamente a la ficha pulsando el enlace:<br>
-<table>
-<thead>
-  <tr>
-    <th>Módelo<br></th>
-    <th>Usos más frecuentes</th>
-    <th>Enlace</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><img src="https://www.raspberrypi.org/homepage-9df4b/static/3cc2aea4df61df03a5c5e1ec99eb26b0/ae23f/c2831d25-216f-4a77-a1ad-45b1019c082e_RPi_400%2BFeatured.jpg" alt="Raspberry Pi 400 - By: Raspberry Pi Fundation" width="200" height="auto"></td>
-    <td>Raspberry Pi 400<br><br>· Ordenador personal. Es un todo en uno, tiene la Raspberry Pi integrada en el teclado. Muy usado en centros educativos o como ordenador familiar. También puede ser muy cómodo para los más expertos, ya que cuenta con los pines <a href="https://es.wikipedia.org/wiki/GPIO" target="_blank">GPIO</a> visibles en la parte de atrás.<br>· Su precio está entre 70 - 80 €.</td>
-    <td><a href="https://www.raspberrypi.org/products/raspberry-pi-400-unit/" target="_blank" rel="noopener noreferrer">Ficha Técnica</a></td>
-  </tr>
-  <tr>
-    <td><img src="https://www.raspberrypi.org/homepage-9df4b/static/bdc42b00ebe8f2312c4d229beb9325bf/43eee/7d247ace-afb2-4555-b7b3-4f236eb779d6_Raspberry%2BPi%2BPico%2B1.jpg" alt="Raspberry Pi Pico - By: Raspberry Pi Fundation" width="200" height="auto"></td>
-    <td>Raspberry Pi Pico<br><br>· Placa de desarrollo. Haciendo la competencia directa a otra famosa familia de placas, <a href="https://www.arduino.cc/" target="_blank">Arduino</a>. Está principalmente especiacilaza en proyectos de electrónica. Si te gusta "cacharrear" con transistores y resistencias. Esta es tu placa.<br>· Su precio está entre 4 - 5 €.</td>
-    <td><a href="https://www.raspberrypi.org/products/raspberry-pi-pico/" target="_blank" rel="noopener noreferrer">Ficha Técnica</a></td>
-  </tr>
-  <tr>
-    <td><img src="https://www.raspberrypi.org/homepage-9df4b/static/a6331df010eb56a7fafb04466af3f1aa/43eee/3a15d4da-46e3-4940-8be6-9fc7d201affe_RPi_4B_FEATURED.jpg" alt="Raspberry Pi 4 - By: Raspberry Pi Fundation" width="200" height="auto"></td>
-    <td>Raspberry Pi 4 modelo B<br><br>· Ordenador personal. Al igual que su hermano 400, la Raspberry Pi 4 es perfecta para uso domestico, educativo o profesional. Podemos elegir diferentes requisitos para un mayor rendimiento, desde los 2 hasta los 8 Gigabytes.<br>· Su precio está entre 74 - 85 €.</td>
-    <td><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/" target="_blank" rel="noopener noreferrer">Ficha Técnica</a></td>
-  </tr>
-  <tr>
-    <td><img src="https://www.raspberrypi.org/homepage-9df4b/static/62d29a0dcd7e8e937db66a0ecf7a0814/ae23f/02d7053b-eeed-4322-8b39-ea26679f4b67_3b%252B%2BANGLE%2B1%2BREFRESH_.jpg" alt="Raspberry Pi 3 B+ - By: Raspberry Pi Fundation" width="200" height="auto"></td>
-    <td>Raspberry Pi 3 Model B+<br><br>· Ordenador Personal. Con menos prestaciones que sus antecesoras, pero suficientes para que aún siga estando en cabeza de las Raspberrys Pi más compradas<br>· Su precio está entre 42 - 45 €.</td>
-    <td><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/" target="_blank" rel="noopener noreferrer">Ficha Técnica</a></td>
-  </tr>
-  <tr>
-    <td><img src="https://www.raspberrypi.org/homepage-9df4b/static/1ba7e2efa3d80873a35e0c5ed79553f5/ae23f/fc6f4bf1-c641-486f-8614-b2f7ad86249a_B%252B%2BANGLE%2B2%2BREFRESH_.jpg" alt="Raspberry Pi 1 B+ - By: Raspberry Pi Fundation" width="200" height="auto"></td>
-    <td>Raspberry Pi 1 Model B+<br><br>· Ordenador Personal. Sin duda la que menos prestaciones tiene, casi no puedes mover un escritorio Raspbian y mucho menos montar un centro multimédia, pero sigue siendo la opción más barata y eficiente si solo queremos tenerla para proyectos menores. La desventaja de esto que deberías saber manejarte por Unix para evitar instalar un escritorio y aprovechar mejor la placa.<br>· Su precio está entre 10 - 25€ en plataformas de segunda mano ya que está practicamente descatalogada.</td>
-    <td><a href="https://www.raspberrypi.org/products/raspberry-pi-1-model-b-plus/" target="_blank" rel="noopener noreferrer">Ficha Técnica</a></td>
-  </tr>
-  <tr>
-    <td><img src="https://www.raspberrypi.org/homepage-9df4b/static/7ee0b4ceafeccddd8aef917cc818990d/ae23f/9371b539-77d4-47f1-b89b-aa65b23c9833_RPI%2BZERO%2BW%2BANGLE%2B2%2BREFRESH_.jpg" alt="Raspberry Pi 1 zero w - By: Raspberry Pi Fundation" width="200" height="auto"></td>
-    <td>Raspberry Pi zero w<br><br>· Mini Ordenador Personal. Esta diminuta placa es del tamaño de un billete plegado de 5€ y un 40% más potente que Raspberry Pi 1 B+. Eso significa que con un espacio tan reducido podemos tener un mini ordenador en el bolsillo. Hay que tener en cuenta que las conexiones de vídeo son diferentes, sustituyendo el HDMI por MicroHDMI.<br>· Su precio está entre 10 - 20€.</td>
-    <td><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/" target="_blank" rel="noopener noreferrer">Ficha Técnica</a></td>
-  </tr>
-</tbody>
-</table>
+
+<!-- Table -->
+
+<div mb-9>
+  <div class="carousel carousel-vertical rounded-box h-96">
+    <div class="carousel-item h-full">
+      <img src="../../../public/RBPmpdels1.png" />
+    </div>
+    <div class="carousel-item h-full">
+      <img src="../../../public/RBPmpdels2.png" />
+    </div>
+    <div class="carousel-item h-full">
+      <img src="../../../public/RBPmpdels3.png" />
+    </div>
+    <div class="carousel-item h-full">
+      <img src="../../../public/RBPmpdels4.png" />
+    </div>
+    <div class="carousel-item h-full">
+      <img src="../../../public/RBPmpdels5.png" />
+    </div>
+  </div>
+    <div class="flex flex-col items-center">
+      <a href="https://www.raspberrypi.com/products/" target="_blank">
+        <button class="btn btn-ghost">Clic para ampliar información</button>
+      </a>
+    </div>
+</div>
+<!-- End Table-->
 
 ## ¿Por qué lo recomiendo tanto? En serio, compra una Raspberry Pi.
 
