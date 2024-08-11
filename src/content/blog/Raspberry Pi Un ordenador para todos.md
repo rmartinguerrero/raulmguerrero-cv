@@ -3,7 +3,6 @@ title: "Raspberry Pi, Un ordenador para todos"
 description: "¿Qué es Raspberry Pi? Raspberry Pi es un ordenador reducido, del tamaño de una tarjeta de crédito, funciona mejor con sistemas operativos basados en Unix"
 pubDate: "Aug 15 2021"
 heroImage: "/PostIMG_RaspberryPi.png"
-badge: "Nuevo Post!"
 tags: ["Raspberry Pi"]
 ---
 ## ¿Qué es Raspberry Pi?
