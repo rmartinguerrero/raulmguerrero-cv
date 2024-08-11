@@ -2,6 +2,7 @@
 title: "Open Source - Ahorrar nunca fue tan fácil"
 description: "Free Software, programas libres, open source o como quieras llamarlo, No solo te permite disfrutar de herramientas poderosas sin coste, sino que también te abre la puerta a un mundo de posibilidades donde la creatividad, la innovación y la comunidad van de la mano."
 pubDate: "Aug 11 2024"
+badge: "Nuevo Post!"
 heroImage: "/PostIMG.png"
 badge: "Nuevo Post!"
 tags: ["Programas Libres", "Business"]
