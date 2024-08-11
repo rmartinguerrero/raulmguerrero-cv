@@ -2,8 +2,8 @@
 title: "Cómo empezar con Raspberry Pi"
 description: "Empezar con Raspberry Pi es realmente sencillo, practicamente es como conectar un aparato DVD a la televisión. Para esta guía, vamos a poner de ejemplo la última Raspberry Pi 4 B"
 pubDate: "Aug 08 2021"
-heroImage: "/PostIMG.png"
-tags: ["Raspberry Pi","Tecnología"]
+heroImage: "/PostIMG_RaspberryPi.png"
+tags: ["Raspberry Pi"]
 ---
 
 Empezar con <a htef="https://www.raspberrypi.org" target="_blank">Raspberry Pi</a> es realmente sencillo, practicamente es como conectar un aparato DVD a la televisión. Para esta guía, vamos a poner de ejemplo la última Raspberry Pi 4 B, [detallada en este post]({% post_url 2021-08-15-Ordenador_para_todos %}), te recomiendo leerlo antes de empezar.
