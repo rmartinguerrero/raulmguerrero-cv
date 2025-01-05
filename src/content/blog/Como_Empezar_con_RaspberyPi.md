@@ -1,7 +1,7 @@
 ---
-title: "Cómo empezar con Raspberry Pi"
+title: "1.Cómo empezar con Raspberry Pi"
 description: "Empezar con Raspberry Pi es realmente sencillo, practicamente es como conectar un aparato DVD a la televisión. Para esta guía, vamos a poner de ejemplo la última Raspberry Pi 4 B"
-pubDate: "Aug 08 2021"
+pubDate: "Aug 15 2021"
 heroImage: "/PostIMG_RaspberryPi.png"
 tags: ["Raspberry Pi"]
 ---
@@ -65,7 +65,7 @@ Ahora que hemos activado las interfaces de SSH y VNC, podemos conectarnos desde 
 ### Conexión por VNC
 Para poder ver el escritorio y navegar de manera visual, necesitamos instalar un programa llamado VNC Viewer, tanto en la Raspberry Pi cómo en el ordenador desde el que deseamos conectar. Para ello solo tenemos que descargar e instalar el programa <a href="https://www.realvnc.com/es/connect/download/viewer/raspberrypi/" alt="Descarga VNC Viewer para Raspberry Pi">desde su web,</a> a la Raspberry Pi. Después hacer lo mismo pero seleccionando la versión que corresponda en nuestro ordenador.
 
-Una vez instalado, tenemos que configurar una contraseña para poder acceder. Abrimos el programa, y en la parte de abajo, podemos ver la sección de "Authentication", pulsamos el enlace azúl para configurar una.<br><img src="https://images.ctfassets.net/tvfg2m04ppj4/39eWzM0Xr89bz8E35cQv8v/040a8997ae5704f03a0a741b70fc0d53/VNC_Server.png" alt="Ventana principal de VNC - by: ctfassets.net">
+Una vez instalado, tenemos que configurar una contraseña para poder acceder. Abrimos el programa, y en la parte de abajo, podemos ver la sección de "Authentication", pulsamos el enlace azúl para configurar una.
 
 Después podemos indicar si queremos iniciar el escritorio remoto don la contraseña de Raspbian o la contraseña que hemos puesto en VNC en este paso, solo tenemos que ir a la parte superior derecha, <i class="fas fa-bars" style="font-size:16px"></i> Menú > Options > Security y desplegamos en "Authentication" para seleccionar con que contraseña entraremos.<br><img src="https://magazines-attachments.raspberrypi.org/magpi/legacy-assets/2016/11/main_image.png" alt="Ventana Options de VNC - by: raspberrypi.org">
 
