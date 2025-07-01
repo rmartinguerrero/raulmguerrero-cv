@@ -1,3 +1,21 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Tus estilos personalizados */
+@layer components {
+  .neon-box {
+    @apply rounded-xl border-2 border-green-400 text-green-100;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow:
+      0 0 5px rgba(0, 255, 0, 0.6),
+      0 0 20px rgba(0, 255, 0, 0.4),
+      0 0 40px rgba(0, 255, 0, 0.2);
+    backdrop-filter: blur(4px);
+  }
+}
+
