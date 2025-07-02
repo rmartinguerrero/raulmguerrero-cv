@@ -6,7 +6,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ✅ Tus estilos personalizados */
+/* ✅ Estilos personalizados */
 @layer components {
   .neon-box {
     @apply rounded-xl border-2 border-green-400 text-green-100;
