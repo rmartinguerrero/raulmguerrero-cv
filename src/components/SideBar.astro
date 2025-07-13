@@ -7,7 +7,7 @@ const { sideBarActiveItemID, isCVPage } = Astro.props;
 
 <div class="drawer-side z-40">
   <label for="my-drawer" class="drawer-overlay"></label>
-  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
+  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-300 text-base-content flex flex-col shadow-[0_0_15px_3px_theme('colors.base.200')]">
     <div class="w-fit mx-auto mt-5 mb-6">
       <a href="/">
         <div class={`avatar transition ease-in-out hover:scale-[102%] block m-auto ${isCVPage ? 'avatar-cv-animated' : ''}`}>
@@ -22,7 +22,7 @@ const { sideBarActiveItemID, isCVPage } = Astro.props;
               alt="Avatar CP"
             />
             <Image
-              class={`mask ${isCVPage ? "opacity-100" : "opacity-0"} mask-squircle absolute inset-0 transition-opacity duration-200 ease-in-out`}
+              class={`mask ${isCVPage ? "opacity-100" : "opacity-0"} mask-circle absolute inset-0 transition-opacity duration-200 ease-in-out`}
               format="webp"
               width={300}
               height={300}
