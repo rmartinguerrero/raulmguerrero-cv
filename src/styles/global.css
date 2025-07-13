@@ -1,7 +1,9 @@
-.time-line-container>div:last-child .education__time>.education__line {
-    display: none;
+/* Oculta la última línea de tiempo */
+.time-line-container > div:last-child .education__time > .education__line {
+  display: none;
 }
 
+/* 🌀 Tailwind base */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,3 +21,40 @@
   }
 }
 
+/* ⚡ Animación de morph + vibración */
+@keyframes morphAndShake {
+  0% {
+    border-radius: 50%;
+    transform: translate(0);
+  }
+  20% {
+    border-radius: 40% / 60%;
+    transform: translateX(-1px);
+  }
+  40% {
+    border-radius: 30% / 70%;
+    transform: translateX(1px);
+  }
+  60% {
+    border-radius: 50% / 50%;
+    transform: translateX(-1px);
+  }
+  80% {
+    border-radius: 45% / 55%;
+    transform: translateX(1px);
+  }
+  100% {
+    border-radius: 60% / 40%;
+    transform: translate(0);
+  }
+}
+
+/* 🎭 Clase de animación para avatar en CV */
+.avatar-cv-animated {
+  animation: morphAndShake 0.8s ease-in-out;
+}
+
+/* 🌗 Transición crossfade entre imágenes */
+.avatar-fade img {
+  transition: opacity 0.2s ease-in-out;
+}
