@@ -3,11 +3,12 @@
   display: none;
 }
 
+
 /* 🌀 Tailwind base */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "tailwindcss";
+
 
 /* ✅ Estilos personalizados */
 @layer components {
@@ -72,3 +73,15 @@
   transform: scale(0.9);
   z-index: 0;
 }
+
+/* ✨ Brillo fugaz del boton traducir */
+@keyframes glimmer {
+  0%   { transform: translateX(-100%); opacity: 0.2; }
+  50%  { transform: translateX(0%);    opacity: 0.3; }
+  100% { transform: translateX(100%);  opacity: 0; }
+}
+
+.animate-glimmer {
+  animation: glimmer 1.2s ease-in-out;
+}
+

@@ -7,6 +7,8 @@ import { ViewTransitions } from "astro:transitions";
 
 import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config";
 
+import ThemeToggle from "../components/ThemeToggle.astro";
+
 const {
   image,
   title = SITE_TITLE,
@@ -19,7 +21,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="es" data-theme="forest">
+<html lang="es">
   <head>
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}

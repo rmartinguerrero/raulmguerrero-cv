@@ -15,20 +15,27 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
 </ul>
 
 <!-- Traduce con Google -->
-<div class="divider opacity-30 my-2"></div>
 <div class="px-4 pb-4 flex justify-center">
   <a target="_blank" href="https://raulmguerrero-com.translate.goog/?_x_tr_sl=auto&_x_tr_tl=it&_x_tr_hl=es">
-    <button class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all
-                   text-base-content bg-base-200 hover:bg-base-300
-                   dark:text-white dark:bg-neutral dark:hover:bg-neutral-focus shadow-md">
-      <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <button class="relative flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium overflow-hidden isolate
+                   border border-base-content/30 text-base-content bg-transparent
+                   hover:text-base-content hover:border-base-content transition-all duration-300 group">
+      <!-- Brillo fugaz -->
+      <span class="absolute inset-0 bg-gradient-to-r from-transparent via-base-content/20 to-transparent opacity-0
+                   group-hover:opacity-100 animate-glimmer"></span>
+
+      <!-- Icono -->
+      <svg class="w-5 h-5 z-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="m13 19 3.5-9 3.5 9m-6.125-2h5.25M3 7h7m0 0h2m-2 0c0 1.63-.793 3.926-2.239 5.655M7.5 6.818V5m.261 7.655C6.79 13.82 5.521 14.725 4 15m3.761-2.345L5 10m2.761 2.655L10.2 15"/>
       </svg>
-      Traduci in 🇮🇹
+
+      <!-- Texto -->
+      <span class="z-10">Traduci in 🇮🇹</span>
     </button>
   </a>
 </div>
+
 <br>
 
 
