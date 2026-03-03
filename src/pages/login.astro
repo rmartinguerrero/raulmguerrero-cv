@@ -2,37 +2,38 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 const correctPassword = import.meta.env.CV_PASSWORD;
+let error = false;
+
+if (Astro.request.method === "POST") {
+  try {
+    const formData = await Astro.request.formData();
+    const password = formData.get("password");
+
+    if (password === correctPassword) {
+      Astro.cookies.set("cv_auth", "authorized", {
+        path: "/",
+        httpOnly: true,
+        sameSite: "strict",
+        maxAge: 60 * 60 * 24, // 24 horas de duración, por ejemplo
+      });
+
+      return Astro.redirect("/cv");
+    } else {
+      error = true;
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
 ---
 
-<html>
-<body style="display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;">
-
+<BaseLayout title="Acceso Privado">
+  <body style="display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;">
     <form method="POST">
-    <h2>Acceso CV</h2>
-    <input type="password" name="password" placeholder="Contraseña" required />
-    <button type="submit">Entrar</button>
+      <h2>Acceso CV</h2>
+      <input type="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Entrar</button>
+      {error && <p style="color:red;">Contraseña incorrecta</p>}
     </form>
-
-    {
-    Astro.request.method === "POST" && (
-        await (async () => {
-        const formData = await Astro.request.formData();
-        const password = formData.get("password");
-
-        if (password === correctPassword) {
-            Astro.cookies.set("cv_auth", "authorized", {
-            path: "/",
-            httpOnly: true,
-            sameSite: "strict",
-            });
-
-            return Astro.redirect("/cv");
-        }
-
-        return <p style="color:red;">Contraseña incorrecta</p>;
-        })()
-    )
-    }
-
-</body>
-</html>
+  </body>
+</BaseLayout>
