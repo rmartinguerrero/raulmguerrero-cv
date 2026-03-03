@@ -1,0 +1,175 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/cv/Section.astro";
+import resume from "../../data/resume.json";
+
+function formatDateRange(start, end) {
+  if (!start) return "";
+
+  const [yearS, monthS] = start.split("-");
+  const startFormatted = `${monthS}-${yearS}`;
+
+  if (!end) {
+    return `Desde ${startFormatted} hasta Actualidad`;
+  }
+
+  const [yearE, monthE] = end.split("-");
+  const endFormatted = `${monthE}-${yearE}`;
+
+  return `Desde ${startFormatted} hasta ${endFormatted}`;
+}
+---
+
+<BaseLayout title="CV">
+
+<section class="max-w-6xl mx-auto py-16 space-y-16">
+
+  <!-- HEADER -->
+  <div class="flex items-center gap-10">
+
+    {resume?.basics?.image && (
+      <img
+        src={resume.basics.image}
+        alt="Foto"
+        class="w-44 h-44 object-cover rounded-full shadow-xl border-4 border-primary"
+      />
+    )}
+
+    <div>
+      <h1 class="text-4xl font-bold">
+        {resume?.basics?.name}
+      </h1>
+
+      <p class="text-lg opacity-70">
+        {resume?.basics?.label}
+      </p>
+
+      <p class="mt-4 max-w-2xl leading-relaxed">
+        {resume?.basics?.summary}
+      </p>
+    </div>
+
+  </div>
+
+  <!-- GRID -->
+  <div class="grid md:grid-cols-3 gap-12">
+
+    <!-- COLUMNA PRINCIPAL -->
+    <div class="md:col-span-2 space-y-12">
+
+      {resume?.work && (
+        <Section title="Experiencia">
+          {resume.work.map((job) => (
+            <div class="space-y-2 mb-8">
+
+              <h3 class="text-lg font-semibold">
+                {job.position} — {job.name}
+              </h3>
+
+              <p class="text-sm opacity-60">
+                {formatDateRange(job.startDate, job.endDate)}
+              </p>
+
+              {job.location && (
+                <p class="text-sm italic opacity-70">
+                  {job.location}
+                </p>
+              )}
+
+              {job.summary && (
+                <p class="mt-2">
+                  {job.summary}
+                </p>
+              )}
+
+              {job.highlights && job.highlights.length > 0 && (
+                <ul class="list-disc ml-6 space-y-1 mt-2">
+                  {job.highlights.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              )}
+
+            </div>
+          ))}
+        </Section>
+      )}
+
+      {resume?.education && (
+        <Section title="Educación">
+          {resume.education.map((edu) => (
+            <div class="mb-4">
+              <h3 class="font-semibold">{edu.institution}</h3>
+              <p class="text-sm opacity-60">
+                {edu.institution} {edu.endDate && ` - ${edu.endDate}`}
+              </p>
+            </div>
+          ))}
+        </Section>
+      )}
+
+    </div>
+
+    <!-- COLUMNA SECUNDARIA -->
+    <div class="space-y-12">
+
+      {resume?.skills && (
+        <Section title="Skills">
+          <div class="flex flex-wrap gap-2 mt-2">
+            {resume.skills.map((skill) => (
+              <div class="badge badge-outline py-5 px-4 rounded-full border-primary/30 hover:border-primary transition-colors cursor-default">
+                <span class="text-sm font-medium">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </Section>
+)}
+
+
+      {resume?.languages && (
+        <Section title="Idiomas">
+          {resume.languages.map((lang) => (
+            <div>
+              <span class="font-medium">{lang.language}</span>
+              <span class="text-sm opacity-60"> — {lang.fluency}</span>
+            </div>
+          ))}
+        </Section>
+      )}
+
+      {resume?.certificates && (
+  <Section title="Certificaciones">
+    <div class="flex flex-col gap-y-4"> <!-- Contenedor para dar espacio entre certificados -->
+      {resume.certificates.map((cert) => (
+        <div>
+          <p class="font-medium">{cert.name}</p>
+          
+          {cert.issuer && (
+            <p class="text-sm opacity-60">{cert.issuer}</p>
+          )}
+          
+          {cert.date && (
+            <time class="text-sm opacity-40 block">{cert.date}</time>
+          )}
+        </div>
+      ))}
+    </div>
+  </Section>
+)}
+</div>
+
+</div>
+
+  <!-- BOTÓN -->
+  <div class="text-center pt-8">
+    <button
+      class="btn btn-primary"
+      onclick="window.open('/cv/print', '_blank')"
+    >
+      Descargar CV en PDF
+    </button>
+  </div>
+
+</section>
+
+</BaseLayout>

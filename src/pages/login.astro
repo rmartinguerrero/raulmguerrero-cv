@@ -1,0 +1,36 @@
+---
+const correctPassword = import.meta.env.CV_PASSWORD;
+---
+
+<html>
+  <body style="display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;">
+
+    <form method="POST">
+      <h2>Acceso CV</h2>
+      <input type="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Entrar</button>
+    </form>
+
+    {
+      Astro.request.method === "POST" && (
+        await (async () => {
+          const formData = await Astro.request.formData();
+          const password = formData.get("password");
+
+          if (password === correctPassword) {
+            Astro.cookies.set("cv_auth", "authorized", {
+              path: "/",
+              httpOnly: true,
+              sameSite: "strict",
+            });
+
+            return Astro.redirect("/cv");
+          }
+
+          return <p style="color:red;">Contraseña incorrecta</p>;
+        })()
+      )
+    }
+
+  </body>
+</html>

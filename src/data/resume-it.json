@@ -1,0 +1,79 @@
+{
+  "$schema": "https://jsonresume.org/schema.json",
+  "basics": {
+    "name": "Raúl Martín Guerrero",
+    "label": "IT Support Specialist / Tecnico Informatico",
+    "image": "/images/cv-photo.jpg",
+    "email": "",
+    "url": "",
+    "summary": "Tecnico informatico con esperienza pluriennale in supporto IT, manutenzione hardware, gestione Active Directory e ambienti enterprise. Professionista orientato alla risoluzione dei problemi, con esperienza in ambienti internazionali tra Spagna e Italia. Appassionato di tecnologia, marketing digitale e innovazione.",
+    "location": {
+      "city": "Treviso",
+      "countryCode": "IT"
+    },
+    "profiles": []
+  },
+  "work": [
+    {
+      "name": "MTSolution S.R.L.",
+      "position": "Tecnico Sharp",
+      "startDate": "2024-02",
+      "location": "Treviso, Italia",
+      "summary": "Manutenzione e riparazione di dispositivi multifunzione professionali.",
+      "highlights": [
+        "Riparazione meccanica ed elettronica (saldatura)",
+        "Installazione e configurazione personalizzata di dispositivi Sharp",
+        "Interventi on-site e in laboratorio",
+        "Supporto tecnico su plotter e dispositivi per ufficio"
+      ]
+    },
+    {
+      "name": "Geox S.P.A.",
+      "position": "IT Support Technician",
+      "startDate": "2023-10",
+      "endDate": "2024-02",
+      "location": "Montebelluna, Italia",
+      "highlights": [
+        "Supporto IT interno agli utenti aziendali",
+        "Gestione ticket tramite Jira",
+        "Configurazione postazioni di lavoro",
+        "Gestione utenti in Active Directory"
+      ]
+    },
+    {
+      "name": "RTVE S.A.",
+      "position": "Tecnico Informatico",
+      "startDate": "2014-03",
+      "endDate": "2016-02",
+      "location": "Madrid, Spagna",
+      "highlights": [
+        "Supporto IT interno",
+        "Gestione inventario hardware",
+        "Monitoraggio servizi web",
+        "Supporto tecnico utenti e spettatori"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "IES Virgen de la Paloma",
+      "area": "Sistemi Informatici",
+      "studyType": "Formazione Professionale",
+      "endDate": "2005-07",
+      "location": "Madrid, Spagna"
+    }
+  ],
+  "skills": [
+    { "name": "Hardware Maintenance" },
+    { "name": "Active Directory" },
+    { "name": "Microsoft 365" },
+    { "name": "Windows Server" },
+    { "name": "Jira" },
+    { "name": "FreshDesk" },
+    { "name": "HTML5 & CSS3" }
+  ],
+  "languages": [
+    { "language": "Spagnolo", "fluency": "Madrelingua" },
+    { "language": "Italiano", "fluency": "Intermedio" }
+  ]
+}

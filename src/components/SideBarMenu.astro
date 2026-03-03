@@ -1,45 +1,56 @@
 ---
-const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300"; // For primary color replace with `active` class
+const currentPath = Astro.url.pathname;
+
+const isActive = (path) => {
+  return currentPath === path || currentPath.startsWith(path + "/");
+};
+
+const activeClass = "bg-base-300";
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-    <li><a class="py-3 text-base" id="projects" href="/projects">Proyectos</a></li>
-    <!--<li><a class="py-3 text-base" id="services" href="/services">Services</a></li>-->
-    <!--<li><a class="py-3 text-base" id="store" href="/store">Store</a></li>-->
-    <li><a class="py-3 text-base" id="blog" href="/blog">Blog</a></li>
-    <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li> 
-    <li><a class="py-3 text-base" id="contact" href="/contact">Contacto</a>
-    </li>
+
+  <li>
+    <a class={`py-3 text-base ${isActive("/") ? activeClass : ""}`} href="/">
+      Home
+    </a>
+  </li>
+
+  <li>
+    <a class={`py-3 text-base ${isActive("/projects") ? activeClass : ""}`} href="/projects">
+      Proyectos
+    </a>
+  </li>
+
+  <li>
+    <a class={`py-3 text-base ${isActive("/blog") ? activeClass : ""}`} href="/blog">
+      Blog
+    </a>
+  </li>
+
+  <li>
+    <a class={`py-3 text-base ${isActive("/cv") ? activeClass : ""}`} href="/cv">
+      CV
+    </a>
+  </li>
+
+  <li>
+    <a class={`py-3 text-base ${isActive("/contact") ? activeClass : ""}`} href="/contact">
+      Contacto
+    </a>
+  </li>
+
 </ul>
 
-<!-- Traduce con Google -->
+<!-- Traductor -->
 <div class="px-4 pb-4 flex justify-center">
   <a target="_blank" href="https://raulmguerrero-com.translate.goog/?_x_tr_sl=auto&_x_tr_tl=it&_x_tr_hl=es">
-    <button class="relative flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium overflow-hidden isolate
+    <button class="relative flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium
                    border border-base-content/30 text-base-content bg-transparent
-                   hover:text-base-content hover:border-base-content transition-all duration-300 group">
-      <!-- Brillo fugaz -->
-      <span class="absolute inset-0 bg-gradient-to-r from-transparent via-base-content/20 to-transparent opacity-0
-                   group-hover:opacity-100 animate-glimmer"></span>
+                   hover:border-base-content transition-all duration-300 group">
 
-      <!-- Icono -->
-      <svg class="w-5 h-5 z-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="m13 19 3.5-9 3.5 9m-6.125-2h5.25M3 7h7m0 0h2m-2 0c0 1.63-.793 3.926-2.239 5.655M7.5 6.818V5m.261 7.655C6.79 13.82 5.521 14.725 4 15m3.761-2.345L5 10m2.761 2.655L10.2 15"/>
-      </svg>
-
-      <!-- Texto -->
       <span class="z-10">Traduci in 🇮🇹</span>
+
     </button>
   </a>
 </div>
-
-<br>
-
-
-<script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
-const activeItemElem = document.getElementById(sideBarActiveItemID);
-activeItemElem && activeItemElem.classList.add(activeClass);
-</script>

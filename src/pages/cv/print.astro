@@ -1,0 +1,186 @@
+---
+import CVLayout from "../../layouts/CVLayout.astro";
+import resume from "../../data/resume.json";
+
+function formatDateRange(start, end) {
+  if (!start) return "";
+
+  const [yearS, monthS] = start.split("-");
+  const startFormatted = `${monthS}-${yearS}`;
+
+  if (!end) {
+    return `Desde ${startFormatted} hasta Actualidad`;
+  }
+
+  const [yearE, monthE] = end.split("-");
+  const endFormatted = `${monthE}-${yearE}`;
+
+  return `Desde ${startFormatted} hasta ${endFormatted}`;
+}
+---
+
+<CVLayout title="CV - Print">
+
+  <div class="cv-print">
+
+    <!-- HEADER -->
+    <div class="header">
+      {resume?.basics?.image && (
+        <img src={resume.basics.image} alt="Foto" />
+      )}
+
+      <div>
+        <h1>{resume?.basics?.name}</h1>
+        <h2>{resume?.basics?.label}</h2>
+        <p>{resume?.basics?.summary}</p>
+      </div>
+    </div>
+
+    <!-- EXPERIENCIA -->
+    {resume?.work && (
+      <section>
+        <h3>Experiencia Profesional</h3>
+
+        {resume.work.map((job) => (
+          <div class="job">
+            <div class="job-header">
+              <strong>{job.position}</strong>
+              <span>{formatDateRange(job.startDate, job.endDate)}</span>
+            </div>
+
+            <div class="job-company">{job.name} {job.location && ` · ${job.location}`}</div>
+
+            {job.summary && <p class="job-summary">{job.summary}</p>}
+
+            {job.highlights && job.highlights.length > 0 && (
+              <ul>
+                {job.highlights.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </section>
+    )}
+
+    <!-- SKILLS -->
+    {resume?.skills && (
+      <section>
+        <h3>Competencias Técnicas</h3>
+        <div class="skills">
+          {resume.skills.map((skill) => (
+            <span>{skill.name}</span>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- IDIOMAS -->
+    {resume?.languages && (
+      <section>
+        <h3>Idiomas</h3>
+        {resume.languages.map((lang) => (
+          <div>{lang.language} — {lang.fluency}</div>
+        ))}
+      </section>
+    )}
+
+  </div>
+
+  <script>
+    window.onload = () => {
+      window.print();
+    };
+  </script>
+
+</CVLayout>
+
+<style>
+  .cv-print {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 11.2px;
+    line-height: 1.35;
+  }
+
+  .header {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .header img {
+    width: 110px;
+    height: 110px;  
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 4px 0 10px 0;
+    color: #444;
+  }
+
+  h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 8px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+  }
+
+  .job {
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  .job-company {
+    font-style: italic;
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .job-summary {
+    margin: 4px 0;
+  }
+
+  ul {
+    margin: 4px 0 8px 18px;
+    padding: 0;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .skills span {
+    border: 1px solid #999;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+  }
+
+  @media print {
+    body {
+      margin: 0;
+    }
+  }
+</style>
