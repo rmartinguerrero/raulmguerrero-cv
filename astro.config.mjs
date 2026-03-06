@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  site: 'https://tudominio.com',
+  site: 'https://raulmguerrero.com',
   output: "server",
   adapter: netlify(),
   integrations: [mdx(), sitemap(), tailwind()],

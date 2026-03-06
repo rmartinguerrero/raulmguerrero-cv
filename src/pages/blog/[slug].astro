@@ -1,14 +1,21 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
-import { BlogSchema } from "../../content/config";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import type { BlogSchema } from "../../content/config";
+
 import PostLayout from "../../layouts/PostLayout.astro";
-import createSlug from "../../lib/createSlug"
+import createSlug from "../../lib/createSlug";
+
+export const prerender = true;
 
 export async function getStaticPaths() {
   const postEntries = await getCollection("blog");
+
   return postEntries.map((entry) => ({
-    params: { slug: createSlug(entry.data.title, entry.slug) },
-    props: { entry },
+    params: {
+      slug: createSlug(entry.data.title, entry.slug)
+    },
+    props: { entry }
   }));
 }
 
@@ -17,7 +24,13 @@ interface Props {
 }
 
 const { entry } = Astro.props;
+
+if (!entry) {
+  throw new Error("Post not found");
+}
+
 const post: BlogSchema = entry.data;
+
 const { Content } = await entry.render();
 ---
 
